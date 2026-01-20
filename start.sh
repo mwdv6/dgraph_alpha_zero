@@ -10,4 +10,4 @@ fi
 
 exec parallel --ungroup --halt now,fail=1 ::: \
     "dgraph zero --my=localhost:5080 --replicas 1 --raft idx=1 --telemetry \"reports=false; sentry=false;\"" \
-    "dgraph alpha --zero=localhost:5080 --acl secret-file=/dgraph/hmac_secret_file --security whitelist=\"100.0.0.0/8\" --telemetry \"reports=false; sentry=false;\""
+    "dgraph alpha --zero=localhost:5080 --acl secret-file=/dgraph/hmac_secret_file --security whitelist=\"0.0.0.0/0\" --telemetry \"reports=false; sentry=false;\""
