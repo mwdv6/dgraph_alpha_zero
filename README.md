@@ -5,6 +5,7 @@ Modified Railway Dgraph template with adjusted IP whitelist configuration.
 ## Changes from Upstream
 
 - Whitelist changed from `100.0.0.0/8` to `0.0.0.0/0` in `start.sh`
+- Fixes ACL blocking Railway's internal container IPs (10.x.x.x range)
 
 ## Upstream
 
